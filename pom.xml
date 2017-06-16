@@ -36,7 +36,7 @@
         <dependency>
             <groupId>hikari-cp</groupId>
             <artifactId>hikari-cp</artifactId>
-            <version>2.6.0</version>
+            <version>1.7.5</version>
         </dependency>
         <dependency>
             <groupId>com.alibaba</groupId>

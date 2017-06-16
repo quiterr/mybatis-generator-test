@@ -26,11 +26,18 @@ public class MyStartupRunner implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         //从数据库查询各类设备的数量
-        String pos="机房";
-        DevicesExample devicesExample = new DevicesExample();
-        DevicesExample.Criteria criteria = devicesExample.createCriteria();
-        criteria.andPositionEqualTo(pos);
-        List<Devices> deviceList = devicesMapper.selectByExample(devicesExample);
+//        String pos="机房";
+//        DevicesExample devicesExample = new DevicesExample();
+//        DevicesExample.Criteria criteria = devicesExample.createCriteria();
+//        criteria.andPositionEqualTo(pos);
+//        List<Devices> deviceList = devicesMapper.selectByExample(devicesExample);
+//        for(Devices devices: deviceList){
+//            logger.info(devices.toString());
+//        }
+
+        //查询全部设备
+        DevicesExample devicesExample2 = new DevicesExample();
+        List<Devices> deviceList = devicesMapper.selectByExample(devicesExample2);
         for(Devices devices: deviceList){
             logger.info(devices.toString());
         }
